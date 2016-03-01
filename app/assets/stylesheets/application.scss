@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Text color
+.white {
+  color: white !important;
+}
+
+// Background
+.transparent-background {
+  background: transparent;
+}
+
+// Position
+.center {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 50px;
+  height: 50px;
+}
+
+.footer {
+  width:100%;
+}
+
+.full-width {
+  width:100%;
+}
+
+// Margin
+.no-margin-bottom {
+  margin-bottom: 0px !important;
+}
+
+.no-border-radius {
+  border-radius: 0px;
+}
+
+.home-image {
+  background: url(asset-path('background.jpeg')) center center fixed no-repeat;
+  background-size: cover;
+  position: fixed;
+  width:100%;
+  height:100%;
+}

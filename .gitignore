@@ -18,4 +18,4 @@ vendor/bundle/
 /tmp
 
 # Ignore workspace
-.idea/workspace.xml
+.idea/

@@ -19,8 +19,11 @@
   margin-bottom: 0px !important;
 }
 
-.jumbotron h1 {
-  margin-bottom: 30px;
+.jumbotron {
+  margin-top: 200px;
+  h1 {
+    margin-bottom: 30px;
+  }
 }
 
 .no-border-radius {
@@ -48,7 +51,6 @@
 // Position
 .center {
   text-align: center;
-  margin-top: 200px;
 }
 
 .relative {
@@ -87,4 +89,18 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+.row-for-message {
+  margin-top: 15px;
+}
+
+// Article show page
+.article-description {
+  margin-top: 0;
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
 }

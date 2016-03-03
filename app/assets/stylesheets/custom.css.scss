@@ -16,7 +16,7 @@
 
 // Margin
 .no-margin-bottom {
-  margin-bottom: 0px !important;
+  margin-bottom: 0 !important;
 }
 
 .jumbotron {
@@ -27,7 +27,7 @@
 }
 
 .no-border-radius {
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .home-image {
@@ -105,7 +105,7 @@ footer {
 
 .article-body {
   border-top: 1px solid #eaeaea;
-  padding: 15px 0px;
+  padding: 15px 0;
 }
 
 .article-actions {

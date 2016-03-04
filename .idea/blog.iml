@@ -214,6 +214,18 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="bcrypt (vbundled(3.1.10), /Users/kersuzan/www/Lab/rails/blog/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.10) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.10/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.10/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.10/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.2.0/gems/bcrypt-3.1.10/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="binding_of_caller (vbundled(0.7.2), /Users/kersuzan/www/Lab/rails/blog/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.7.2) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.7.2/ext" />

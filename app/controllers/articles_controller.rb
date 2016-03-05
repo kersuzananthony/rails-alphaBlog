@@ -2,6 +2,8 @@ class ArticlesController < ApplicationController
 
   # Before Show, edit, update, destroy actions, set_article private method is called
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5)
@@ -17,7 +19,7 @@ class ArticlesController < ApplicationController
   def create
     # render plain: params[:article].inspect
     @article = Article.new(article_params)
-    @article.user = User.first # hard code User for the moment
+    @article.user = current_user
     if @article.save
       # Successfully saved the article, redirect to show method
       flash[:success] = 'Article was successfully created!'
@@ -54,4 +56,12 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
+
+  def require_same_user
+    if current_user != @article.user
+      flash[:danger] = 'You can only edit or delete your own articles.'
+      redirect_to articles_path
+    end
+  end
+
 end

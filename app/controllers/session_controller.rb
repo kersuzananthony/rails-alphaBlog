@@ -1,5 +1,8 @@
 class SessionController < ApplicationController
 
+  before_action :require_anonymous, only: [:create, :new]
+  before_action :require_user, only: [:destroy]
+
   # Display login form
   def new
 
@@ -15,14 +18,14 @@ class SessionController < ApplicationController
       redirect_to user_path(user)
     else
       # Credentials incorrect
-      flash.now[:danger] = 'Invalid credentials, please try again'
+      flash.now[:danger] = 'Invalid credentials, please try again.'
       render 'new'
     end
   end
 
   def destroy
     session[:user_id] = nil
-    flash[:success] = 'You have logged out'
+    flash[:success] = 'You have logged out.'
 
     redirect_to root_path
   end

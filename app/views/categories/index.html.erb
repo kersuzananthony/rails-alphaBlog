@@ -5,13 +5,14 @@
     <%= will_paginate %>
     <% @categories.each do |category| %>
         <ul class="listing">
-          <li class="row">
+          <div class="row">
             <div class="well col-md-4 col-md-offset-4">
-              <div class="article-title">
+              <li class="article-title">
                 <%= link_to category.name, category_path(category) %>
-              </div>
+              </li>
+              <li><small><%= pluralize(category.articles.count, 'article') %></small></li>
             </div>
-          </li>
+          </div>
         </ul>
     <% end %>
     <%= will_paginate %>

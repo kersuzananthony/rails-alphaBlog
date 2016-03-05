@@ -7,6 +7,7 @@ class SessionController < ApplicationController
 
   # When user post login credentials
   def create
+    # comment
     user = User.find_by(email: params[:session][:email].downcase)
 
     if user && user.authenticate(params[:session][:password])

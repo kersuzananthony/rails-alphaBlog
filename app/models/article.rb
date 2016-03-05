@@ -2,6 +2,8 @@ class Article < ActiveRecord::Base
 
   # Relationship
   belongs_to :user
+  has_many :article_categories
+  has_many :categories, through: :article_categories
 
   # Validation
   validates :title, presence: true, length: { minimum: 3, maximum: 50 }

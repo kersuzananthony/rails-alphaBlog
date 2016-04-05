@@ -23,6 +23,9 @@
     <% if @article.categories.any? %>
       <p>Categories: <%= render @article.categories %></p>
     <% end %>
+
+    <%= render 'disqus' %>
+
     <div class="article-actions">
       <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
           <%=  link_to 'Edit', edit_article_path(@article), class: 'btn btn-xs btn-primary' %>
